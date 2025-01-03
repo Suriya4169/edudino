@@ -1,0 +1,92 @@
+/* Align container perfectly at the center */
+body {
+    font-family: 'futura', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.92;
+}
+
+/* Center the signup form */
+.signup-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading alignment */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    position: relative;
+    margin-bottom: 25px; /* Add extra spacing between fields */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 15px 16px 50px; /* Adjust padding for icons */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+/* Icon inside input box */
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 60%; /* Lower the icon */
+    transform: translateY(-50%);
+    color: #555555;
+    font-size: 22px;
+    pointer-events: none; /* Prevent interaction with the icon */
+}
+
+/* Button styling */
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Login text */
+.login-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
