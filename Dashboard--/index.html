@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses'],
+        ['2004',  1000,      400],
+        ['2005',  1170,      460],
+        ['2006',  660,       1120],
+        ['2007',  1030,      540]
+        ]);
+
+        var options = {
+        title: 'Company Performance',
+        curveType: 'function',
+    legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+    }
+    </script>
+</head>
+<body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+<title>School Dashboard</title>
+
+</head>
+<body>
+<div class="sidebar">
+    <h2>Sketch & solve</h2>
+    <br>
+    <ul>
+    <li>Home</li><br>
+    <li>Teachers</li><br>
+    <li>Subjects</li><br>
+    <li>Draw</li><br>
+    <li>Exams</li><br>
+    <li>Lessons</li><br>
+    <li>Exams</li><br>
+    <li>Attendance</li><br>
+    <li>Announcements</li><br>
+    <li>Profile</li><br>
+    <li>Settings</li><br>
+    <li>Logout</li><br>
+    </ul>
+</div>
+<div class="main-content">
+    <div class="header">
+    <div>Welcome</div>
+    <div></div>
+    </div>
+    <div class="stats">
+    <div class="card purple"><h3>2</h3>Admins</div>
+    <div class="card yellow"><h3>24</h3>Teachers</div>
+    <div class="card purple"><h3>460</h3>Students</div>
+    <div class="card yellow"><h3>382</h3>Parents</div>
+    </div>
+    <canvas id="myChart" width="400" height="200" style="color: black;"></canvas>
+
+    <!-- Add more sections for charts, calendar, events, etc. -->
+</div>
+</body>
+</html>
