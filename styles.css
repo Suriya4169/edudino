@@ -4,7 +4,7 @@ body {
     display: flex;
   }
   .sidebar {
-    width: 200px;
+    width: 250px;
     background: #f5f5f5;
     padding: 20px;
     height: 100vh;
@@ -21,8 +21,18 @@ body {
     border-radius: 20px;
   }
   .sidebar li:hover {
-    background: aqua;
+    background: #80bfff;
   }
+
+  .sidebar a{
+    position: relative;
+    font-size: 1.1em;
+    color: #3A3A3A;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 500;
+  }
+
   .main-content {
     flex: 1;
     padding: 20px;
@@ -42,16 +52,18 @@ body {
     border-radius: 50%;
     border: 2px solid #3A3A3A;
 }
+  
+
   .title{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     border-radius: 15px;
-    background-color: aqua;
+    background-color: #2a90f6;
     border-color: antiquewhite;
     box-shadow: #fffacd;
     padding: 15px;
-    color: black;
+    color: white;
     text-align: center;
   }
 
@@ -73,7 +85,7 @@ table, th, td{
     font-family: Arial, Helvetica, sans-serif;
 }
 table{
-  background-color: rgb(185, 239, 249);
+  background-color: rgb(185, 219, 249);
   border-radius: 20px;
 }
 th, td{
@@ -81,7 +93,7 @@ th, td{
     border-radius: 100%;;
 }
 th{
-    background: rgb(0, 179, 255);
+    background: rgb(1, 142, 203);
     color: white;
     font-family: arial black;
 }
@@ -90,7 +102,7 @@ td{
     color: black;
 }
 td:hover{
-    background: aqua;
+    background: rgb(0, 140, 255);
     color: white;
 }
 

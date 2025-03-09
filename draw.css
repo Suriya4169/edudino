@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #6200ee;
-  --primary-light: #bb86fc;
-  --primary-dark: #3700b3;
+  --primary-color: #80bfff;
+  --primary-light: #abd2ff;
+  --primary-dark: #208fea;
   --secondary-color: #03dac6;
   --background: #f9f9f9;
   --surface: #ffffff;
@@ -17,6 +17,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+a {
+  position: relative;
+  font-size: 1.1em;
+  color:aliceblue;
+  text-decoration: none;
+  margin-left: 40px;
+  font-weight: 500;
 }
 
 html, body {
