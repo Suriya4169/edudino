@@ -21,7 +21,10 @@ body {
     border-radius: 20px;
   }
   .sidebar li:hover {
-    background: #80bfff;
+    background: #0080ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-5px);
   }
 
   .sidebar a{
@@ -50,7 +53,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #3A3A3A;
+    border: 2px solid #005eff;
 }
   
 
@@ -59,7 +62,7 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     border-radius: 15px;
-    background-color: #2a90f6;
+    background-color: #0080ff;
     border-color: antiquewhite;
     box-shadow: #fffacd;
     padding: 15px;
@@ -81,7 +84,7 @@ table, th, td{
     width: 100%;
     table-layout: fixed;
     text-align: center;
-    font-size: 22px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
 table{
@@ -89,8 +92,13 @@ table{
   border-radius: 20px;
 }
 th, td{
-    padding: 17px;
+    padding: 25px;
     border-radius: 100%;;
+}
+td:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(-5px);
 }
 th{
     background: rgb(1, 142, 203);
