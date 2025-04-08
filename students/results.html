@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Results</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      background-color: white;
+    }
+
+    .results-table {
+      display: none;
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    .results-table th, .results-table td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      border-radius: 0;
+    }
+
+    .results-table th {
+      background-color: #0080ff;
+      color: white;
+    }
+
+    .results-table td {
+      background-color: #e2f8ff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="title"><i class="fas fa-paint-brush"></i> <a href="Students portal.html">Sketch & Solve</a></div>
+  <br>
+  <ul>
+    <li><a href="Students portal.html">Dashboard</a></li><br>
+    <li><a href="courses.html">Courses</a></li><br>
+    <li><a href="results.html">Results</a></li><br>
+    <li><a href="attendance.html">Attendance</a></li><br>
+    <li><a href="announcements.html">Announcements</a></li><br>
+    <li style="background-color: #ff3246;"><a href="logout.html">Logout</a></li><br>
+  </ul>
+</div>
+
+<div class="main-content">
+  <div class="header">
+    <div><b>Welcome, Student</b></div>
+    <div class="profile">
+      <img src="resources/user.jpg" alt="User" />
+    </div>
+  </div>
+
+  <h2 style="margin-top: 30px; color: #0080ff;">View Your Exam Results</h2>
+
+  <label for="subjectSelect"><b>Select Subject:</b></label>
+  <select id="subjectSelect" onchange="showResults()">
+    <option value="">-- Select Subject --</option>
+    <option value="math">Mathematics</option>
+    <option value="physics">Physics</option>
+    <option value="english">English</option>
+  </select>
+
+  <!-- Results for Mathematics -->
+  <table id="math" class="results-table">
+    <thead>
+      <tr>
+        <th>Exam</th>
+        <th>Max Marks</th>
+        <th>Marks Scored</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Unit Test 1</td><td>25</td><td>20</td><td>B+</td></tr>
+      <tr><td>Midterm</td><td>50</td><td>41</td><td>A</td></tr>
+      <tr><td>Unit Test 2</td><td>25</td><td>23</td><td>A+</td></tr>
+      <tr><td>Final Exam</td><td>100</td><td>82</td><td>A+</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Results for Physics -->
+  <table id="physics" class="results-table">
+    <thead>
+      <tr>
+        <th>Exam</th>
+        <th>Max Marks</th>
+        <th>Marks Scored</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Unit Test 1</td><td>25</td><td>18</td><td>B</td></tr>
+      <tr><td>Midterm</td><td>50</td><td>37</td><td>B+</td></tr>
+      <tr><td>Unit Test 2</td><td>25</td><td>20</td><td>B+</td></tr>
+      <tr><td>Final Exam</td><td>100</td><td>70</td><td>A</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Results for English -->
+  <table id="english" class="results-table">
+    <thead>
+      <tr>
+        <th>Exam</th>
+        <th>Max Marks</th>
+        <th>Marks Scored</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Unit Test 1</td><td>25</td><td>22</td><td>A</td></tr>
+      <tr><td>Midterm</td><td>50</td><td>45</td><td>A+</td></tr>
+      <tr><td>Unit Test 2</td><td>25</td><td>24</td><td>A+</td></tr>
+      <tr><td>Final Exam</td><td>100</td><td>90</td><td>O</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function showResults() {
+    const selected = document.getElementById("subjectSelect").value;
+    const tables = document.querySelectorAll(".results-table");
+
+    // Hide all tables first
+    tables.forEach(table => table.style.display = "none");
+
+    if (selected) {
+      document.getElementById(selected).style.display = "table";
+    }
+  }
+</script>
+
+</body>
+</html>
